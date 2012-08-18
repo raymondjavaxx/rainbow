@@ -10,6 +10,10 @@ class Grayscale extends Color {
 		$this->_g = $g;
 	}
 
+	public function gray() {
+		return $this->_g;
+	}
+
 	public function toRGB() {
 		return new RGB(array(
 			'r' => $this->_g,

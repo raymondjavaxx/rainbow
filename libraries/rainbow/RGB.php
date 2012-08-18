@@ -16,6 +16,18 @@ class RGB extends Color {
 		return $this;
 	}
 
+	public function red() {
+		return $this->_components['r'];
+	}
+
+	public function green() {
+		return $this->_components['g'];
+	}
+
+	public function blue() {
+		return $this->_components['b'];
+	}
+
 	public function inverted() {
 		$inverted = array();
 

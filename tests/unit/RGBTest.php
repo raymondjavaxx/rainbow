@@ -2,6 +2,8 @@
 
 use \rainbow\RGB;
 
+use \rainbow\swatch\aco\Writer;
+
 class RGBTest extends \PHPUnit_Framework_TestCase {
 
 	public function testToHex() {
