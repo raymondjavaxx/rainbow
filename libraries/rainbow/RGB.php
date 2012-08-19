@@ -37,23 +37,19 @@ class RGB extends Color {
 	}
 
 	public function inverted() {
-		$inverted = array();
-
-		foreach ($this->_components as $k => $v) {
-			$inverted[$k] = (1.0 - $v);
-		}
-
-		return new RGB($inverted);
+		return new RGB(array(
+			'r' => (1.0 - $this->_components['r']),
+			'g' => (1.0 - $this->_components['g']),
+			'b' => (1.0 - $this->_components['b'])
+		));
 	}
 
 	public function toWebSafe() {
-		$websafe = array();
-
-		foreach ($this->_components as $k => $v) {
-			$websafe[$k] = floor($v / 0.2) * 0.2;
-		}
-
-		return new RGB($websafe);
+		return new RGB(array(
+			'r' => (floor($this->_components['r'] / 0.2) * 0.2),
+			'g' => (floor($this->_components['g'] / 0.2) * 0.2),
+			'b' => (floor($this->_components['b'] / 0.2) * 0.2)
+		));
 	}
 
 	public function toHex() {
