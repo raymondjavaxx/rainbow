@@ -1,0 +1,11 @@
+Rainbow
+===
+
+PHP color utility library.
+
+Usage
+---
+
+	$color = new \rainbow\RGB(array('r' => 1.0, 'g' => 0.0, 'b' => 0.0));
+	echo $color->toHex(); // ff0000
+	echo $color->inverted()->toHex(); // 00ffff
