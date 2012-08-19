@@ -32,6 +32,14 @@ class RGBTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals(0.15, $color->blue());
 	}
 
+	public function testLighten() {
+		$color = new RGB(array('r' => 0.0, 'g' => 0.0, 'b' => 0.0));
+		$color = $color->lighten(0.5);
+		$this->assertEquals(0.5, $color->red());
+		$this->assertEquals(0.5, $color->green());
+		$this->assertEquals(0.5, $color->blue());
+	}
+
 	public function testGetters() {
 		$color = new RGB(array('r' => 0.1, 'g' => 0.2, 'b' => 0.3));
 		$this->assertEquals(0.1, $color->red());

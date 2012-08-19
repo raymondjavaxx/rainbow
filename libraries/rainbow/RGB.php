@@ -35,6 +35,14 @@ class RGB extends Color {
 		));
 	}
 
+	public function lighten($factor) {
+		return new RGB(array(
+			'r' => min(1.0, $this->_components['r'] + (1.0 * $factor)),
+			'g' => min(1.0, $this->_components['g'] + (1.0 * $factor)),
+			'b' => min(1.0, $this->_components['b'] + (1.0 * $factor))
+		));
+	}
+
 	public function inverted() {
 		return new RGB(array(
 			'r' => (1.0 - $this->_components['r']),
