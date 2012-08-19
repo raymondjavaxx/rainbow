@@ -28,6 +28,14 @@ class RGB extends Color {
 		return $this->_components['b'];
 	}
 
+	public function darken($factor) {
+		return new RGB(array(
+			'r' => $this->_components['r'] * (1.0 - $factor),
+			'g' => $this->_components['g'] * (1.0 - $factor),
+			'b' => $this->_components['b'] * (1.0 - $factor)
+		));
+	}
+
 	public function inverted() {
 		$inverted = array();
 
