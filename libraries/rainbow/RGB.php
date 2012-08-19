@@ -8,8 +8,7 @@ class RGB extends Color {
 
 	public function __construct($components = array()) {
 		$defaults = array('r' => 0.0, 'g' => 0.0, 'b' => 0.0);
-		$components += $defaults;
-		$this->_components = $components;
+		$this->_components = $components + $defaults;
 	}
 
 	public function toRGB() {
